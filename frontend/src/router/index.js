@@ -42,7 +42,7 @@ const routes = [
   },
   {
     path: '/Products/Home',
-    name: 'Sample',
+    name: 'Products',
     component: ProductsHome
   },
   {

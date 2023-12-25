@@ -69,9 +69,9 @@
       <li>Admin</li>
       <li>Dashboard</li>
     </ul>
-    <a href="https://justboil.me/" onclick="alert('Coming soon'); return false" target="_blank" class="button blue">
+    <a href="/Products/Home" class="button blue">
       <span class="icon"><i class="mdi mdi-credit-card-outline"></i></span>
-      <span>Premium Demo</span>
+      <span>SHOP</span>
     </a>
   </div>
 </section>
