@@ -1,0 +1,35 @@
+CRITICAL - 2023-12-21 06:23:35 --> Undefined variable $id
+in APPPATH\Controllers\UserController.php on line 25.
+ 1 APPPATH\Controllers\UserController.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\laragon\\www\\backend1\\app\\Controllers\\UserController.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->getUserData()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\backend1\\public\\index.php')
+CRITICAL - 2023-12-21 06:24:05 --> Call to undefined method App\Models\UserModel::findAlls
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\UserController.php(25): CodeIgniter\Model->__call('findAlls', [])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->getUserData()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\backend1\\public\\index.php')
+CRITICAL - 2023-12-21 06:24:08 --> Call to undefined method App\Models\UserModel::findAlls
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\UserController.php(25): CodeIgniter\Model->__call('findAlls', [])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->getUserData()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\backend1\\public\\index.php')
+CRITICAL - 2023-12-21 06:24:08 --> Call to undefined method App\Models\UserModel::findAlls
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\UserController.php(25): CodeIgniter\Model->__call('findAlls', [])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->getUserData()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\backend1\\public\\index.php')
+CRITICAL - 2023-12-21 07:00:35 --> Trait "App\Controllers\ResponseTrait" not found
+in APPPATH\Controllers\IndexController.php on line 9.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
