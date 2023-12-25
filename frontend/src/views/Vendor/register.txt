@@ -1,0 +1,82 @@
+<template>
+    <v-container>
+      <v-row justify="center">
+        <v-col cols="12" md="8">
+          <v-card>
+            <v-card-title class="headline">
+              User Registration
+            </v-card-title>
+            <v-card-text>
+              <v-form @submit.prevent="registerUser">
+                <v-text-field v-model="username" label="Username" required></v-text-field>
+                <v-text-field v-model="password" label="Password" type="password" required></v-text-field>
+                <v-text-field v-model="passwordConfirmation" label="Confirm Password" type="password" required></v-text-field>
+                <v-text-field v-model="vendorName" label="Vendor Name" required></v-text-field>
+                <v-text-field v-model="contactEmail" label="Contact Email" required></v-text-field>
+                <v-text-field v-model="contactNumber" label="Contact Number" required></v-text-field>
+                <v-btn type="submit" color="primary">Register</v-btn>
+              </v-form>
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </template>
+  
+  <script>
+  import router from '@/router';
+  import axios from 'axios';
+  
+  export default {
+    data() {
+      return {
+        username: '',
+        password: '',
+        passwordConfirmation: '',
+        vendorName: '',
+        contactEmail: '',
+        contactNumber: '',
+      };
+    },
+    methods: {
+      async registerUser() {
+        try {
+          // Check if passwords match
+          if (this.password !== this.passwordConfirmation) {
+            console.error('Password and password confirmation do not match');
+            // Handle mismatch, e.g., show an error message
+            return;
+          }
+  
+          const response = await axios.post('register', {
+            username: this.username,
+            password: this.password,
+            vendor_name: this.vendorName,
+            contact_email: this.contactEmail,
+            contact_number: this.contactNumber,
+          });
+  
+          // Assuming your backend responds with JSON directly
+          const data = response.data;
+  
+          if (response.status === 200) {
+            console.log('User registered successfully:', data);
+            // Handle successful registration, e.g., redirect to login page
+            router.push('/Vendor/Login')
+          } else {
+            console.error('Registration failed:', data);
+            // Handle registration failure, e.g., show an error message
+          }
+        } catch (error) {
+          console.error('Error during registration:', error);
+          // Handle general error during registration
+        }
+      },
+    },
+  };
+  </script>
+  
+  <style scoped>
+  /* Add your custom styles here if needed */
+  </style>
+  
